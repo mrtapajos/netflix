@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Netflix</title>
+</head>
+<body>
+    <header id="navigation">
+        <div class="categories-logo-container">
+          <img src="./assets/netflix_full_logo.png" alt="Netflix logo"/>
+          <div class="categories">
+            <a href="#">Início</a>
+            <a href="#">Séries</a>
+            <a href="#">Filmes</a>
+            <a href="#">Bombando</a>
+            <a href="#">Minha lista</a>
+            <a href="#">Navegar por idiomas</a>
+          </div>
+        </div>
+        <div class="search-login-container">
+          <div class="search-container">
+            <img src="./assets/magnifying-glass.svg" alt="search" onclick="showSearch()">
+            <input type="search" id="search" placeholder="Título, gente e gênero" />
+          </div>
+          <div class="profile-container">
+            <div class="login">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="profile logo" />
+              <img src="./assets/caret-right-fill.svg" alt="profile options" id="profile_caret" />
+            </div>
+            <div class="profile-content">
+              <div class="profiles">
+                <div>
+                  <img src="http://occ-0-6645-3851.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABceskA5x4J8tPPGrpbl0pasEOd1RwF7PDjvIOR8P4dwIayVvD10tmC-G5nXC23smU6-H4onhbt8prP1twBC6dQuN-p4DcNg.png?r=02d" alt="" />
+                  <span>Sabrina</span>
+                </div>
+                <div>
+                  <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/06/12_Jinx.jpg" alt="" />
+                  <span>Raimundo</span>
+                </div>
+                <div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRslupd2n8u15Kz_rI93YoZZN0_Dhr1hnTuVqR4S9kfTrPq3rgp_-PUv4ncYLD6ClkqdDc&usqp=CAU" alt="" />
+                  <span>Amigo</span>
+                </div>
+                <div>
+                  <img src="./assets/pencil-simple-line.svg" alt="" />
+                  <span>Gerenciar perfis</span>
+                </div>
+                <div>
+                  <img src="./assets/user.svg" alt="" />
+                  <span>Conta</span>
+                </div>
+                <div>
+                  <img src="./assets/question.svg" alt="" />
+                  <span>Central de ajuda</span>
+                </div>
+              </div>
+              <a href="#">Sair da Netflix</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+    <main>
+        <section id="home"></section>
+        
+        <section>
+            <h2>Filmes populares</h2>
+            
+            <div class="movies-tv-carrossel">
+                <button onclick="voltar('popular')"> &lt; </button>
+                <div class="carrossel" id="popular">
+                  <div class="expandir"></div>
+                </div>
+                <button onclick="avancar('popular')"> &gt; </button>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Filmes bem avaliados</h2>
+            
+            <div class="movies-tv-carrossel">
+                <button onclick="voltar('top_rated')"> &lt; </button>
+                <div class="carrossel" id="top_rated">
+                  <div class="expandir"></div>
+                </div>
+                <button onclick="avancar('top_rated')"> &gt; </button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Em breve</h2>
+            
+            <div class="movies-tv-carrossel">
+                <button onclick="voltar('upcoming')"> &lt; </button>
+                <div class="carrossel" id="upcoming">
+                  <div class="expandir"></div>
+                </div>
+                <button onclick="avancar('upcoming')"> &gt; </button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
